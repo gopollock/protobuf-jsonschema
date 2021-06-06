@@ -6,7 +6,7 @@ var path = require('path');
 function Compiler(filename, additionalProperties, paths) {
   this.messages = {};
   this.enums = {};
-  this.schema = this.open(filename);
+  this.schema = this.open(filename, paths);
   if (typeof additionalProperties === 'undefined') {
     this.additionalProperties = true;
   } else {

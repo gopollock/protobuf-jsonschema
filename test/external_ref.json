@@ -1,0 +1,24 @@
+{
+  "definitions": {
+    "External": {
+      "additionalProperties": false,
+      "properties": {
+        "foo": {
+          "type": "string"
+        }
+      },
+      "title": "External",
+      "type": "object"
+    },
+    "Outer": {
+      "additionalProperties": false,
+      "properties": {
+        "external": {
+          "$ref": "#/definitions/External"
+        }
+      },
+      "title": "Outer",
+      "type": "object"
+    }
+  }
+}

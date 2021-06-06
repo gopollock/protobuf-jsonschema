@@ -25,9 +25,15 @@ describe('protobuf-jsonschema', function() {
   });
 
   it('should disallow additional properties.', function() {
-    var defs = require('./test.json').definitions;
     var opt = {additionalProperties: false}
     assert.deepEqual(compile(__dirname + '/test.proto', opt),
         require('./test_no_additional_properties.json'));
+  });
+
+
+  it('should handle external definitions', function() {
+    var opt = {additionalProperties: false, paths: [__dirname + '/externals']}
+    assert.deepEqual(compile(__dirname + '/external_ref.proto', opt),
+        require('./external_ref.json'));
   });
 });

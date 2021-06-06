@@ -15,7 +15,7 @@ commander
     var opt = {
         model: model,
         additionalProperties: commander.additionalProperties,
-        paths: commander.protoPath};
+        paths: commander.proto_path};
     var result = compile(file, opt);
     
     if (format === 'json')

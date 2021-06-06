@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "external.proto";
+
+
+message Outer {
+
+  External external = 1;
+
+}
