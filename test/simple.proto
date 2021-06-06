@@ -1,0 +1,4 @@
+message Simple {
+  required string foo = 1;
+  optional int32 bar = 2;
+}

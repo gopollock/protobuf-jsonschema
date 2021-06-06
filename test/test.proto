@@ -1,19 +1,18 @@
-import "google/protobuf/descriptor.proto";
 import "test2.proto";
 
 message Basic {
-  required string foo = 0;
+  required string foo = 2;
   optional int32 bar = 1;
 }
 
 message Parent {
-  required uint32 id = 0;
+  required uint32 id = 4;
   optional Child child = 1;
   optional Child reused = 2;
   optional test2.Basic basic = 3;
   
   message Child {
-    required string foo = 0;
+    required string foo = 1;
   }
 }
 
@@ -23,19 +22,19 @@ message Enum {
     TWO = 1;
     THREE = 2;
   }
-  Type typeOne = 0;
-  Type typeTwo = 1;
+  Type typeOne = 1;
+  Type typeTwo = 2;
 }
 
 message Array {
-  repeated string values = 0;
+  repeated string values = 1;
 }
 
 message Map {
-  map<string, string> foo = 0;
+  map<string, string> foo = 2;
   map<string, Value> bar = 1;
   
   message Value {
-    uint32 val = 0;
+    uint32 val = 2;
   }
 }

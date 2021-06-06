@@ -1,4 +1,4 @@
-var parseSchema = require('../protocol-buffers-schema');
+var parseSchema = require('protocol-buffers-schema');
 var primitive = require('./types');
 var fs = require('fs');
 var path = require('path');

@@ -1,0 +1,22 @@
+{
+  "definitions": {
+    "Simple": {
+      "title": "Simple",
+      "type": "object",
+      "properties": {
+        "foo": {
+          "type": "string"
+        },
+        "bar": {
+          "type": "integer",
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        }
+      },
+      "required": [
+        "foo"
+      ],
+      "additionalProperties": true
+    }
+  }
+}
